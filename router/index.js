@@ -6,6 +6,9 @@ import VueRouter from "vue-router"; //第一步：导入路由对象
 const Main = () => import('../views/Main');
 const User = () => import('../views/user/User');
 const Home = () => import('../views/home/Home');
+const Mall = () => import('../views/mall/Mall');
+const PageOne = () => import('../views/other/PageOne');
+const PageTwo = () => import('../views/other/PageTwo');
 
 //第一步：并安装vue-router插件
 Vue.use(VueRouter)
@@ -23,9 +26,24 @@ const routes = [
                 component: Home,
             },
             {
+                path: '/mall',
+                name: 'mall',
+                component: Mall,
+            },
+            {
                 path: '/user',
                 name: 'user',
                 component: User
+            },
+            {
+                path: '/page1',
+                name: 'page1',
+                component: PageOne
+            },
+            {
+              path: '/page2',
+              name: 'page2',
+              component: PageTwo
             }
         ]
     },
